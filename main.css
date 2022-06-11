@@ -1,0 +1,137 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #674baf;
+  background-image: url(images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #FFF;
+}
+
+@media all and (min-width: 375px) {
+  body {
+    background-image: url(images/bg-desktop.svg);
+    background-size: 100%;
+    max-width: 1440px;
+  }
+}
+
+body img {
+  width: 100%;
+}
+
+.bloc-note {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+
+@media all and (min-width: 800px) {
+  .bloc-note {
+    padding: 3rem 5rem;
+  }
+}
+
+.bloc-note header {
+  width: 130px;
+}
+
+@media all and (min-width: 800px) {
+  .bloc-note section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3rem;
+  }
+  .bloc-note section > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .bloc-note section .detail {
+    text-align: start;
+  }
+}
+
+.bloc-note section .detail {
+  margin-top: 3rem;
+}
+
+.bloc-note section .detail h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+}
+
+.bloc-note section .detail p {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 2rem;
+}
+
+.bloc-note section .detail button {
+  cursor: pointer;
+  border: none;
+  padding: .8rem 4rem;
+  color: #674baf;
+  background-color: #FFF;
+  border-radius: 4rem;
+  -webkit-box-shadow: 0 0 10px #333;
+          box-shadow: 0 0 10px #333;
+}
+
+.bloc-note section .detail button:hover {
+  background-color: #e882e8;
+  color: #FFF;
+}
+
+.bloc-note footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: .7rem;
+}
+
+@media all and (min-width: 800px) {
+  .bloc-note footer {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+}
+
+.bloc-note footer i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #FFF;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.bloc-note footer i:hover {
+  cursor: pointer;
+  border: 1px solid #e882e8;
+  color: #e882e8;
+}
+/*# sourceMappingURL=main.css.map */
