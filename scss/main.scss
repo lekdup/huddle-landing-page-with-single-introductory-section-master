@@ -1,7 +1,4 @@
-$color-violet: hsl(257, 40%, 49%);
-$color-softmagenta: hsl(300, 69%, 71%);
-$color-white: #FFF;
-$color-shadow: #333;
+@import "_variables.scss";
 
 * {
     box-sizing: border-box;
@@ -20,7 +17,6 @@ body {
     {
         background-image: url(images/bg-desktop.svg);
         background-size: 100%;
-        max-width: 1440px;
     }
     // media
     & img {
