@@ -3,7 +3,9 @@
     background-image: url(../images/bg-desktop.svg);
   }
 }
-* {
+*,
+::before,
+::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -13,85 +15,88 @@ body {
   background-color: #674baf;
 }
 
+img {
+  max-width: 100%;
+}
+
 .bloc-note {
   background-image: url(../images/bg-mobile.svg);
   background-repeat: no-repeat;
+  font-family: "Open Sans";
   text-align: center;
   color: #FFF;
   padding: 2rem;
   display: grid;
   gap: 3rem;
 }
-
-img {
-  max-width: 100%;
-}
-
 @media all and (min-width: 800px) {
   .bloc-note {
     padding: 3rem 5rem;
   }
 }
-.bloc-note header {
-  width: 130px;
+
+header {
+  width: 8rem;
 }
+
 @media all and (min-width: 800px) {
-  .bloc-note section {
+  section {
     display: flex;
     gap: 3rem;
   }
-  .bloc-note section > * {
+  section > * {
     flex: 1;
   }
-  .bloc-note section .detail {
+  section .detail {
     text-align: start;
   }
 }
-.bloc-note section .detail {
+section .detail {
   margin-top: 3rem;
 }
-.bloc-note section .detail h1 {
+section .detail h1 {
   font-family: "Poppins", sans-serif;
   font-size: 1.5em;
   margin-bottom: 1rem;
 }
-.bloc-note section .detail p {
+section .detail p {
   font-family: "Open Sans", sans-serif;
   margin-bottom: 2rem;
 }
-.bloc-note section .detail button {
+section .detail .button {
   cursor: pointer;
   border: none;
+  text-decoration: none;
+  font-size: 0.8rem;
   padding: 0.8rem 4rem;
   color: #674baf;
   background-color: #FFF;
-  border-radius: 4rem;
+  border-radius: 100vmax;
   box-shadow: 0 0 10px #333;
 }
-.bloc-note section .detail button:hover {
+section .detail .button:hover {
   background-color: #e882e8;
   color: #FFF;
 }
-.bloc-note footer {
+
+footer {
   display: flex;
   justify-content: center;
   gap: 0.7rem;
 }
 @media all and (min-width: 800px) {
-  .bloc-note footer {
+  footer {
     justify-content: end;
   }
 }
-.bloc-note footer i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+footer i {
+  color: #FFF;
   border: 1px solid #FFF;
   border-radius: 50%;
   width: 30px;
   height: 30px;
 }
-.bloc-note footer i:hover {
+footer i:hover {
   cursor: pointer;
   border: 1px solid #e882e8;
   color: #e882e8;

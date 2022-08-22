@@ -1,7 +1,9 @@
 @import "_variables.scss";
 @import "_media.scss";
 
-* {
+*,
+::before,
+::after{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -9,94 +11,92 @@
 body {
     background-color: $color-violet;
 }
-
-.bloc-note {
-    background-image: url(../images/bg-mobile.svg);
-    background-repeat: no-repeat;
-    text-align: center;
-    color: $color-white;
-    padding: 2rem;
-    display: grid;
-    gap: 3rem;
-}
-
 img {
     max-width: 100%;
 }
 
 .bloc-note {
-     @media all and (min-width: 800px)
-     {
-         padding: 3rem 5rem;
-     }
-
-    header{
-        width: 130px;
+    background-image: url(../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    font-family: 'Open Sans';
+    text-align: center;
+    color: $color-white;
+    padding: 2rem;
+    display: grid;
+    gap: 3rem;
+    @media all and (min-width: 800px)
+    {
+        padding: 3rem 5rem;
     }
-    // logo
-    section{
-        @media all and (min-width: 800px)
-        {
-            display: flex;
-            gap: 3rem;
-            &>* {
-                flex: 1;
-            }
-            .detail {
-                text-align: start;
-            }
-        }
-        // media
-        .detail {
-            margin-top: 3rem;
-            h1 {
-                font-family: 'Poppins', sans-serif;
-                font-size: 1.5em;
-                margin-bottom: 1rem;
-            }
-            p{
-                font-family: 'Open Sans', sans-serif;
-                margin-bottom: 2rem;
-            }
-            button {
-                cursor: pointer;
-                border: none;
-                padding: .8rem 4rem;
-                color: $color-violet;
-                background-color: $color-white;
-                border-radius: 4rem;
-                box-shadow: 0 0 10px $color-shadow;
-                &:hover{
-                    background-color: $color-softmagenta;
-                    color: $color-white;
-                }
-            }
-        } // detail
-    } // section
+}
 
-    footer {
+
+header{
+    width: 8rem;
+}
+// logo
+section{
+    @media all and (min-width: 800px)
+    {
         display: flex;
-        justify-content: center;
-        gap: .7rem;
-
-        @media all and (min-width: 800px)
-        {
-            justify-content: end;
+        gap: 3rem;
+        &>* {
+            flex: 1;
         }
-
-        i{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid $color-white;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
+        .detail {
+            text-align: start;
+        }
+    }
+    // media
+    .detail {
+        margin-top: 3rem;
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5em;
+            margin-bottom: 1rem;
+        }
+        p{
+            font-family: 'Open Sans', sans-serif;
+            margin-bottom: 2rem;
+        }
+        .button {
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            font-size: .8rem;
+            padding: .8rem 4rem;
+            color: $color-violet;
+            background-color: $color-white;
+            border-radius: 100vmax;
+            box-shadow: 0 0 10px $color-shadow;
             &:hover{
-                cursor: pointer;
-                border: 1px solid $color-softmagenta;
-                color: $color-softmagenta;
+                background-color: $color-softmagenta;
+                color: $color-white;
             }
+        }
+    } // detail
+} // section
+
+footer {
+    display: flex;
+    justify-content: center;
+    gap: .7rem;
+
+    @media all and (min-width: 800px)
+    {
+        justify-content: end;
+    }
+
+    i{
+        color: $color-white;
+        border: 1px solid $color-white;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        &:hover{
+            cursor: pointer;
+            border: 1px solid $color-softmagenta;
+            color: $color-softmagenta;
         }
     }
 }
