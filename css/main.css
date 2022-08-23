@@ -86,9 +86,7 @@ footer a:hover {
 
   .bloc-note {
     background-image: url(../images/bg-desktop.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    padding: 2.5rem 4rem;
+    padding: 3rem 4rem;
   }
 
   section {
@@ -97,14 +95,13 @@ footer a:hover {
     gap: 3rem;
   }
   section .detail {
-    max-width: 30rem;
+    max-width: 27rem;
   }
   section .detail h1 {
     font-size: 2rem;
   }
   section .detail p {
     font-family: sans-serif;
-    line-height: 1.4rem;
     font-weight: 100;
   }
 
@@ -113,4 +110,4 @@ footer a:hover {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */
