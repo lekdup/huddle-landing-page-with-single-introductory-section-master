@@ -1,5 +1,4 @@
 @import "_variables.scss";
-@import "_media.scss";
 
 *,
 ::before,
@@ -10,6 +9,7 @@
 }
 body {
     background-color: $color-violet;
+    min-height: 100vh;
 }
 img {
     max-width: 100%;
@@ -24,30 +24,13 @@ img {
     padding: 2rem;
     display: grid;
     gap: 3rem;
-    @media all and (min-width: 800px)
-    {
-        padding: 3rem 5rem;
-    }
 }
-
-
+    
 header{
     width: 8rem;
-}
-// logo
+} // logo
+
 section{
-    @media all and (min-width: 800px)
-    {
-        display: flex;
-        gap: 3rem;
-        &>* {
-            flex: 1;
-        }
-        .detail {
-            text-align: start;
-        }
-    }
-    // media
     .detail {
         margin-top: 3rem;
         h1 {
@@ -57,46 +40,51 @@ section{
         }
         p{
             font-family: 'Open Sans', sans-serif;
-            margin-bottom: 2rem;
+    margin-bottom: 2rem;
+    }
+    .button {
+        cursor: pointer;
+        border: none;
+        text-decoration: none;
+        font-size: .8rem;
+        padding: .8rem 4rem;
+        color: $color-violet;
+        background-color: $color-white;
+        border-radius: 100vmax;
+        box-shadow: 0 0 10px $color-shadow;
+        &:hover{
+            background-color: $color-softmagenta;
+            color: $color-white;
         }
-        .button {
-            cursor: pointer;
-            border: none;
-            text-decoration: none;
-            font-size: .8rem;
-            padding: .8rem 4rem;
-            color: $color-violet;
-            background-color: $color-white;
-            border-radius: 100vmax;
-            box-shadow: 0 0 10px $color-shadow;
-            &:hover{
-                background-color: $color-softmagenta;
-                color: $color-white;
-            }
-        }
-    } // detail
+    }
+} // detail
 } // section
 
 footer {
     display: flex;
     justify-content: center;
     gap: .7rem;
-
-    @media all and (min-width: 800px)
-    {
-        justify-content: end;
-    }
-
-    i{
-        color: $color-white;
-        border: 1px solid $color-white;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        &:hover{
-            cursor: pointer;
-            border: 1px solid $color-softmagenta;
-            color: $color-softmagenta;
+    
+    // @media all and (min-width: 800px)
+    // {
+        //     justify-content: end;
+        // }
+        
+        a{
+            display: grid;
+            place-items: center;
+            text-decoration: none;
+            color: $color-white;
+            border: 1px solid $color-white;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            &:hover{
+                cursor: pointer;
+                border: 1px solid $color-softmagenta;
+                color: $color-softmagenta;
+            }
         }
     }
-}
+    
+    @import "_media.scss";

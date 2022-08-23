@@ -1,6 +1,25 @@
 @media all and (min-width: 500px) {
+    header{
+        width: 11rem;
+    }
 
     .bloc-note {
         background-image: url(../images/bg-desktop.svg);
+        padding: 3rem 4rem;
+    }
+    section{
+        display: flex;
+        text-align: start;
+        gap: 2.8rem;
+        .detail{
+            max-width: 27rem;
+            h1{
+                font-size: 2rem;
+            }
+            p{
+                font-family: sans-serif;
+                font-weight: 100;
+            }
+        }
     }
 }
