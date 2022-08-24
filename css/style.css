@@ -42,7 +42,7 @@ section .detail p {
   font-family: "Open Sans", sans-serif;
   margin-bottom: 2rem;
 }
-section .detail .button {
+section .button {
   cursor: pointer;
   border: none;
   text-decoration: none;
@@ -53,7 +53,7 @@ section .detail .button {
   border-radius: 100vmax;
   box-shadow: 0 0 10px #333;
 }
-section .detail .button:hover {
+section .button:hover {
   background-color: #e882e8;
   color: #FFF;
 }
@@ -82,13 +82,15 @@ footer a:hover {
 @media all and (min-width: 500px) {
   header {
     width: 11rem;
+    margin-bottom: 2rem;
   }
 
   .bloc-note {
     background-image: url(../images/bg-desktop.svg);
-    background-size: 100%;
+    background-size: contain;
     background-repeat: no-repeat;
     padding: 2.5rem 4rem;
+    gap: 0;
   }
 
   section {

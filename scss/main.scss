@@ -40,8 +40,9 @@ section{
         }
         p{
             font-family: 'Open Sans', sans-serif;
-    margin-bottom: 2rem;
-    }
+            margin-bottom: 2rem;
+            }
+    } // detail
     .button {
         cursor: pointer;
         border: none;
@@ -57,34 +58,27 @@ section{
             color: $color-white;
         }
     }
-} // detail
 } // section
 
 footer {
     display: flex;
     justify-content: center;
     gap: .7rem;
-    
-    // @media all and (min-width: 800px)
-    // {
-        //     justify-content: end;
-        // }
-        
-        a{
-            display: grid;
-            place-items: center;
-            text-decoration: none;
-            color: $color-white;
-            border: 1px solid $color-white;
-            border-radius: 50%;
-            width: 2rem;
-            height: 2rem;
-            &:hover{
-                cursor: pointer;
-                border: 1px solid $color-softmagenta;
-                color: $color-softmagenta;
-            }
+    a{
+        display: grid;
+        place-items: center;
+        text-decoration: none;
+        color: $color-white;
+        border: 1px solid $color-white;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        &:hover{
+            cursor: pointer;
+            border: 1px solid $color-softmagenta;
+            color: $color-softmagenta;
         }
     }
+}
     
-    @import "_media.scss";
+@import "_media.scss";

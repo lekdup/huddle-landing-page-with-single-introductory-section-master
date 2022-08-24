@@ -1,13 +1,15 @@
 @media all and (min-width: 500px) {
     header{
         width: 11rem;
+        margin-bottom: 2rem;
     }
 
     .bloc-note {
         background-image: url(../images/bg-desktop.svg);
-        background-size: 100%;
+        background-size: contain;
         background-repeat: no-repeat;
         padding: 2.5rem 4rem;
+        gap: 0;
     }
     section{
         display: flex;
